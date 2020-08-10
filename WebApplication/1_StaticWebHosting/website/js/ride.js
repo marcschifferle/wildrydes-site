@@ -20,9 +20,10 @@ WildRydes.map = WildRydes.map || {};
             method: 'POST',
             url: _config.api.invokeUrl + '/ride',
             headers: {
-                Authorization: authToken
+                authorizer: authToken
             },
             data: JSON.stringify({
+                authorizer: authToken,
                 PickupLocation: {
                     Latitude: pickupLocation.latitude,
                     Longitude: pickupLocation.longitude
@@ -39,6 +40,7 @@ WildRydes.map = WildRydes.map || {};
     }
 
     function completeRequest(result) {
+        console.log(result);
         var unicorn;
         var pronoun;
         console.log('Response received from API: ', result);
