@@ -16,7 +16,7 @@ function sendContactRequest(event){
             }
         }),
         contentType: 'application/json',
-        success: completeRequest,
+        success: void(0),
         error: function ajaxError(jqXHR, textStatus, errorThrown) {
             console.error('Error sending form: ', textStatus, ', Details: ', errorThrown);
             console.error('Response: ', jqXHR.responseText);
