@@ -6,6 +6,7 @@ function sendContactRequest(event){
         method: 'POST',
         url: _config.api.invokeUrl + '/contact',
         headers: {
+            "Access-Control-Allow-Origin": "*"
         },
         data: JSON.stringify({
             ContactData: {
