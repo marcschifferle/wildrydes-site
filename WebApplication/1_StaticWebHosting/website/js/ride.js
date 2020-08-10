@@ -23,7 +23,6 @@ WildRydes.map = WildRydes.map || {};
                 authorizer: authToken
             },
             data: JSON.stringify({
-                authorizer: authToken,
                 PickupLocation: {
                     Latitude: pickupLocation.latitude,
                     Longitude: pickupLocation.longitude
